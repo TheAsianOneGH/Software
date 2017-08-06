@@ -11,6 +11,7 @@ function addDropDown(id,text){
  document.getElementsByTagName("BODY")[0].innerHTML += content;
  var style = '.dropbtn{background-color:#FFFFFF;color:#00FFFF;padding:16px;font-size:16px;border:none;cursor:pointer; }';
  style += '.dropContent{display:none;}';
+ style += '.dropContent a{padding:12px 16px;}';
  style += '.dropdown{position:relative;display:inline-block;}';
  style += '.dropdown:hover .dropContent{display:block;}';
  document.getElementsByTagName("STYLE")[0].innerHTML += style;
