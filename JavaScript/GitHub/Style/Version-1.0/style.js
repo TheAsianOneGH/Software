@@ -1,7 +1,8 @@
 var STYLE = {
  addStyle: function(style){ addStyleTag(style); },
  addDrop: function(id,text){ addDropDown(id,text); },
- addDItem: function(id,text){ addDropItem(id,text); }
+ addDItem: function(id,text){ addDropItem("c"+id,text); },
+ itemAct: function(id,num,text){ addItemAction("ac"+id,num,text); };
 };
 function addStyleTag(style){
  document.getElementsByTagName("HEAD")[0].innerHTML += '<style>body{font-family:'+style+'}</style>';
@@ -17,6 +18,17 @@ function addDropDown(id,text){
  document.getElementsByTagName("STYLE")[0].innerHTML += style;
 }
 function addDropItem(id,text){
- var content = '<h3>';content += text;content += '</h3>';
- document.getElementById("c"+id).innerHTML += content;
+ var content = '<h3 id="ac';content += id;content += '">';content += text;content += '</h3>';
+ document.getElementById(id).innerHTML += content;
+}
+function addItemAction(id,act,text){
+ if(act=="1"){
+  document.getElementById(id).addEventListener("click", function(){
+   window.location=text;
+  });
+ }else{
+  if(act=="2"){
+   document.getElementById(id).addEventListener("click", text());
+  }
+ }
 }
