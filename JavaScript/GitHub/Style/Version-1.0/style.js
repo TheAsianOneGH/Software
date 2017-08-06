@@ -2,7 +2,7 @@ var STYLE = {
  addStyle: function(style){ addStyleTag(style); },
  addDrop: function(id,text){ addDropDown(id,text); },
  addDItem: function(id,text){ addDropItem("c"+id,text); },
- itemAct: function(id,num,text){ addItemAction("ac"+id,text); }
+ itemAct: function(id,text){ addItemAction("ac"+id,text); }
 };
 function addStyleTag(style){
  document.getElementsByTagName("HEAD")[0].innerHTML += '<style>body{font-family:'+style+'}</style>';
