@@ -1,4 +1,4 @@
-var STYLE {
+var STYLE = {
  addStyle: function(){ addStyleTag(); }
 };
 function addStyleTag(){
