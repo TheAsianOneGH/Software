@@ -1,7 +1,7 @@
 var STYLE = {
  addStyle: function(style){ addStyleTag(style); },
  addDrop: function(id,text){ addDropDown(id,text); },
- addDropMenu: function(id,text){ addDropItem(id,text); }
+ addDItem: function(id,text){ addDropItem(id,text); }
 };
 function addStyleTag(style){
  document.getElementsByTagName("HEAD")[0].innerHTML += '<style>body{font-family:'+style+'}</style>';
