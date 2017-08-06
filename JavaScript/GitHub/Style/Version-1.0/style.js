@@ -23,7 +23,7 @@ function addDropItem(id,text){
 }
 function addItemAction(id,act,text){
  if(act=="1"){
-  document.getElementById(id).addEventListener("click", function(){window.location = "text";});
+  document.getElementById(id).addEventListener("click", function(){window.location = text;});
  }else{
   if(act=="2"){
    document.getElementById(id).addEventListener("click", text());
