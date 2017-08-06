@@ -26,7 +26,7 @@ function addItemAction(id,act,text){
   document.getElementById(id).addEventListener("click", function(){window.location = text;});
  }else{
   if(act=="2"){
-   document.getElementById(id).addEventListener("click", text());
+   document.getElementById(id).addEventListener("click", new function(){this[text] = function(){}; });
   }
  }
 }
